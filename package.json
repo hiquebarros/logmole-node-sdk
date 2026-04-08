@@ -1,0 +1,57 @@
+{
+  "name": "logmole-node-sdk",
+  "version": "0.1.0",
+  "description": "Node.js SDK for ingesting logs into Logmole",
+  "license": "MIT",
+  "author": "Logmole",
+  "homepage": "https://logmole.pro",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/your-org/logmole.git",
+    "directory": "logmole-node-sdk"
+  },
+  "bugs": {
+    "url": "https://github.com/your-org/logmole/issues"
+  },
+  "keywords": [
+    "logmole",
+    "logs",
+    "logging",
+    "observability",
+    "ingestion"
+  ],
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "lint": "eslint .",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "prepack": "npm run build"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "eslint": "^9.0.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.6.0"
+  }
+
+}
