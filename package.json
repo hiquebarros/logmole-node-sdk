@@ -7,11 +7,11 @@
   "homepage": "https://logmole.pro",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/your-org/logmole.git",
+    "url": "git+https://github.com/hiquebarros/logmole-node-sdk.git",
     "directory": "logmole-node-sdk"
   },
   "bugs": {
-    "url": "https://github.com/your-org/logmole/issues"
+    "url": "https://github.com/hiquebarros/logmole-node-sdk/issues"
   },
   "keywords": [
     "logmole",
@@ -42,15 +42,19 @@
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch",
-    "lint": "eslint .",
+    "lint": "eslint . --max-warnings 0",
     "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "npm run build && node --test test/*.test.mjs",
     "prepack": "npm run build"
   },
   "dependencies": {},
   "devDependencies": {
     "@types/node": "^22.0.0",
+    "@eslint/js": "^9.0.0",
     "eslint": "^9.0.0",
+    "globals": "^15.0.0",
     "tsup": "^8.0.0",
+    "typescript-eslint": "^8.0.0",
     "typescript": "^5.6.0"
   }
 
